@@ -1,22 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logoImg from "./img/FerreteriaLeal.jpg";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import "./app.css";
 
 function App() {
+  const stylesH1 = {
+    color: "lightblue",
+  };
+  //Los componentes siempre con mayus Inicial
+  // dentro de NavBar importamos y mostramos CartWidget
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NavBar />
+        <h1 style={stylesH1}>Ferreteria Leal</h1>
+        <img alt="logo coder" src={logoImg} />
+        
+        <ItemListContainer prop="Bienvenido a Ferreteria Leal" /> 
       </header>
     </div>
   );
